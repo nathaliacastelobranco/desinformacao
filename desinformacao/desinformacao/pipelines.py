@@ -10,4 +10,6 @@ from itemadapter import ItemAdapter
 
 class DesinformacaoPipeline:
     def process_item(self, item, spider):
+        if spider.name == 'globo':
+            return item
         return item
